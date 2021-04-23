@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const db = require('../config/connection.js')
+const userRoutes = require('../routes/user.js')
 // const User = require('../models/User')
 // const Order = require("../models/Order");
 // const Category = require('../models/Category')
