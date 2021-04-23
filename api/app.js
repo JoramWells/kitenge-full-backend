@@ -3,6 +3,9 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const db = require('../config/connection.js')
 const userRoutes = require('../routes/user.js')
+const productRoutes = require("../routes/product");
+const mpesaRoutes = require("../routes/safaricom-register");
+// const orderRoutes = require("../routes/order");
 // const User = require('../models/User')
 // const Order = require("../models/Order");
 // const Category = require('../models/Category')
@@ -32,8 +35,11 @@ db.authenticate()
   // })
 
   //Routes
-  //***********User, ****************** */
+  //***********Product,User,M-PESA ****************** */
+app.use("/", productRoutes);
 app.use("/user", userRoutes);
+app.use("/mpes", mpesaRoutes);
+// app.use("/payment", orderRoutes);
 
 
 
