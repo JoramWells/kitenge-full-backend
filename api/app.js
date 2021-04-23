@@ -31,6 +31,11 @@ db.authenticate()
 
   // })
 
+  //Routes
+  //***********User, ****************** */
+app.use("/user", userRoutes);
+
+
 
 app.listen(()=>{
   console.log(`App runing on http://localhost/${PORT}`)
